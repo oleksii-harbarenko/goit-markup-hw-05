@@ -462,6 +462,7 @@ img {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 .footer-input {
   border: 1px solid #fff;
@@ -470,7 +471,10 @@ img {
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  margin-right: 24px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
   padding-right: 16px;
   padding-left: 16px;
   outline: transparent;
@@ -478,10 +482,8 @@ img {
 }
 
 .footer-input::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 200%;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
 }
@@ -494,8 +496,9 @@ img {
   display: flex;
   padding: 8px 24px;
   border-radius: 4px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -508,8 +511,11 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  gap: 16px;
   fill: #fff;
+}
+
+.footer-input-icon {
+  margin-left: 16px;
 }
 
 .footer-btn:hover,
@@ -541,7 +547,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 24px;
+  padding: 72px 24px 24px;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -557,6 +563,9 @@ img {
 }
 
 .modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -565,9 +574,12 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-left: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #e7e9fc;
   margin-bottom: 24px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .modal-close-icon {
@@ -578,6 +590,7 @@ img {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -639,6 +652,10 @@ img {
   fill: #4d5ae5;
 }
 
+.modal-field-textarea {
+  margin-bottom: 16px;
+}
+
 .modal-texarea {
   resize: none;
   width: 100%;
@@ -648,6 +665,16 @@ img {
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-texarea:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-texarea::placeholder {
@@ -657,8 +684,11 @@ img {
   color: rgba(46, 47, 66, 0.4);
 }
 
+.modal-field-checkbox {
+  margin-bottom: 24px;
+}
+
 .modal-check-text {
-  display: flex;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -673,7 +703,7 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -686,6 +716,12 @@ img {
   fill: #f4f4fd;
   background-color: #404bbf;
   border: 1px solid #404bbf;
+  border: none;
+}
+
+.privacy-link {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
 
 .modal-send-btn {
